@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plex), "Segoe UI", sans-serif;
+  --color-paper: #e8eef5;
+  --color-ink: #122033;
+  --color-muted: #5a6b80;
+  --color-line: #c7d2e0;
+  --color-card: #ffffff;
+  --color-teal: #1f5f9e;
+  --color-teal-deep: #0f2744;
+  --color-amber: #c26a1a;
+  --color-clay: #b33a48;
+  --color-ok: #1a7a5c;
+  --color-sky: #b9cce3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-paper);
+  background-image:
+    radial-gradient(circle at 8% -8%, rgba(31, 95, 158, 0.14), transparent 34%),
+    linear-gradient(180deg, rgba(15, 39, 68, 0.04), transparent 28%),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      rgba(15, 39, 68, 0.015) 11px,
+      rgba(15, 39, 68, 0.015) 12px
+    );
+  color: var(--color-ink);
+  font-family: var(--font-plex), "Segoe UI", sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: #c5d8ef;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.4s ease both;
+}

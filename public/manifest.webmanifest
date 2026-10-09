@@ -1,0 +1,13 @@
+{
+  "name": "FieldRelay — field reports that get through",
+  "short_name": "FieldRelay",
+  "description": "An offline-first field issue tracker that works anywhere, even where there's no signal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#e8eef5",
+  "theme_color": "#0f2744",
+  "lang": "en",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
